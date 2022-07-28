@@ -16,6 +16,7 @@ export default function Post() {
 
   useEffect(() => {
     console.log(`${context.message} ${Post.name}`);
+    window.scrollTo(0, 0);
     const postId = param.id;
     fetchData(postId!);
   }, []);

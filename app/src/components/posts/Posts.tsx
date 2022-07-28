@@ -16,6 +16,7 @@ export default function Posts() {
 
   useEffect(() => {
     console.log(`${context.message} ${Posts.name}`);
+    window.scrollTo(0, 0);
     fetchData();
   }, []);
 
