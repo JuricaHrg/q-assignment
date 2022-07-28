@@ -1,6 +1,6 @@
+import { IGreeting } from "classes/IGreeting";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import { IGreeting } from "../../classes/IGreeting";
 import Footer from "./footer/Footer";
 import Header from "./navbar/Navbar";
 import styles from "./styles.module.scss";

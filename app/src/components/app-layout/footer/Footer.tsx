@@ -1,5 +1,5 @@
+import { IGreeting } from "classes/IGreeting";
 import { useEffect } from "react";
-import { IGreeting } from "../../../classes/IGreeting";
 
 interface IProps {
   greeting: IGreeting;

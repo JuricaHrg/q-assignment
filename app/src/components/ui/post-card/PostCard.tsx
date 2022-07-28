@@ -1,8 +1,8 @@
+import { IGreeting } from "classes/IGreeting";
+import { IPost } from "classes/IPost";
+import { IUser } from "classes/IUser";
 import { useEffect } from "react";
 import { useNavigate, useOutletContext } from "react-router";
-import { IGreeting } from "../../../classes/IGreeting";
-import { IPost } from "../../../classes/IPost";
-import { IUser } from "../../../classes/IUser";
 import styles from "./styles.module.scss";
 
 interface IProps {

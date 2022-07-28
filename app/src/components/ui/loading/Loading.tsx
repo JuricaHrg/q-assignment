@@ -1,6 +1,6 @@
+import { IGreeting } from "classes/IGreeting";
 import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
-import { IGreeting } from "../../../classes/IGreeting";
 
 export default function Loading() {
   const context: IGreeting = useOutletContext();

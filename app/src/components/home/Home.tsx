@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate, useOutletContext } from "react-router-dom";
-import { IGreeting } from "../../classes/IGreeting";
+import { IGreeting } from "classes/IGreeting";
+import { useEffect } from "react";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import styles from "./styles.module.scss";
 
 export default function Home() {

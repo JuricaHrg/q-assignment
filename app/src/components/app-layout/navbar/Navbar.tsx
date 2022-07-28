@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import { IGreeting } from "classes/IGreeting";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { IGreeting } from "../../../classes/IGreeting";
 import styles from "./styles.module.scss";
 
 interface IProps {

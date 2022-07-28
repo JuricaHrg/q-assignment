@@ -1,10 +1,10 @@
+import { IGreeting } from "classes/IGreeting";
+import { IPost } from "classes/IPost";
+import { IUser } from "classes/IUser";
+import Loading from "components/ui/loading/Loading";
+import PostCard from "components/ui/post-card/PostCard";
 import { useEffect, useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
-import { IGreeting } from "../../classes/IGreeting";
-import { IPost } from "../../classes/IPost";
-import { IUser } from "../../classes/IUser";
-import Loading from "../ui/loading/Loading";
-import PostCard from "../ui/post-card/PostCard";
 
 export default function Post() {
   const context: IGreeting = useOutletContext();
