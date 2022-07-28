@@ -1,7 +1,9 @@
+import { baseApiPosts, baseApiUsers } from "const/api";
+
 export function fetchPosts() {
-  return fetch("https://jsonplaceholder.typicode.com/posts");
+  return fetch(baseApiPosts);
 }
 
 export function fetchUsers() {
-  return fetch("https://jsonplaceholder.typicode.com/users");
+  return fetch(baseApiUsers);
 }

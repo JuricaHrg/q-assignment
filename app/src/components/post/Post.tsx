@@ -3,6 +3,7 @@ import { IPost } from "classes/IPost";
 import { IUser } from "classes/IUser";
 import Loading from "components/ui/loading/Loading";
 import PostCard from "components/ui/post-card/PostCard";
+import { baseApiPosts, baseApiUsers } from "const/api";
 import { useEffect, useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 
@@ -23,12 +24,8 @@ export default function Post() {
     setLoading(true);
 
     let [post, users] = await Promise.all([
-      fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then(
-        (res) => res.json()
-      ),
-      fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-        res.json()
-      ),
+      fetch(`${baseApiPosts}${postId}`).then((res) => res.json()),
+      fetch(baseApiUsers).then((res) => res.json()),
     ]);
     setPost(post);
     setUser(users.find((u: IUser) => u.id === post.userId));
