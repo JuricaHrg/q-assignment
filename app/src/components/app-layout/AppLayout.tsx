@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { IGreeting } from "../../classes/IGreeting";
 import Footer from "./footer/Footer";
@@ -6,10 +7,17 @@ import styles from "./styles.module.scss";
 
 export default function AppLayout() {
   const greeting = new IGreeting("Hello from");
+
+  useEffect(() => {
+    console.log(`${greeting.message} ${AppLayout.name}`);
+  }, []);
+
   return (
     <div className={styles.layout}>
       <Header greeting={greeting}></Header>
-      <Outlet context={greeting}></Outlet>
+      <div className={styles.contentWrapper}>
+        <Outlet context={greeting}></Outlet>
+      </div>
       <Footer greeting={greeting}></Footer>
     </div>
   );
